@@ -16,10 +16,10 @@ function App () {
 		} else if (name && isEditing) {
 			// deal with edit.
 		} else {
-			// show alert
 			const newItem = { id: new Date().getTime().toString(), title: name };
 			setList([ ...list, newItem ]);
 			setName('');
+			showAlert(true, 'success', `${newItem.title} added to the list`);
 		}
 	};
 
